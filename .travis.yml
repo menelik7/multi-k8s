@@ -1,0 +1,15 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t menelik7/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true menelik7/react-test npm test
+
+after_success:
+  - docker build -t menelik7/multi-client ./client
+  - docker build -t menelik7/multi-nginx ./nginx
+  - docker build -t menelik7/multi-server ./server
+  - docker build -t menelik7/multi-worker ./worker
