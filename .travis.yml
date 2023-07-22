@@ -16,6 +16,6 @@ after_success:
   - docker build -t menelik7/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push menelik7/multi-client
-  - dokcer push menelik7/multi-nginx
+  - docker push menelik7/multi-nginx
   - docker push menelik7/multi-server
   - docker push menelik7/multi-worker
