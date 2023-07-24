@@ -19,3 +19,15 @@ after_success:
   - docker push menelik7/multi-nginx
   - docker push menelik7/multi-server
   - docker push menelik7/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-multi"
+  env: "Docker-multi-env"
+  bucket_name: "elasticbeanstalk-us-east-1-237483526022"
+  bucket_path: "docker-multi"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secrete_access_key: "$AWS_SECRET_KEY"
