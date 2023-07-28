@@ -6,7 +6,7 @@ export default function Header() {
 		<div className="App">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
-				<h1 className="App-title">Get your Fib</h1>
+				<h1 className="App-title">Fib Calculator k8s</h1>
 				<Link to="/">home</Link>
 				<Link to="/otherpage">Other Page</Link>
 			</header>
