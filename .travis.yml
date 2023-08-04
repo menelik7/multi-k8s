@@ -20,6 +20,10 @@ before_install:
 script:
   - docker run -e CI=true menelik7/react-test npm run test
 
+branches:
+  only:
+    - master
+
 deploy:
   provider: script
   script: bash ./deploy.sh
