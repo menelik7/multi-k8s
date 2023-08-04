@@ -7,7 +7,10 @@ export default function Header() {
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<h1 className="App-title">Fib Calculator Multiple Cluster K8s</h1>
-				<p>Ascertain Tavis build only runs on pull req or push to master</p>
+				<p>
+					Ascertain Tavis build only runs on pull req or push to master with
+					only master command in .travis.yml
+				</p>
 				<Link to="/">home</Link>
 				<Link to="/otherpage">Other Page</Link>
 			</header>
